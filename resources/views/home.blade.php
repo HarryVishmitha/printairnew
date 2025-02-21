@@ -12,7 +12,7 @@
 
         <!-- Left Side -->
         <div class="flex items-center space-x-5">
-            <a href="#" class="text-gray-600 hover:text-blue-600 text-[17px] ">
+            <a href="#" class="text-gray-400 hover:text-[#f44032] text-[17px] ">
                 <i class="fa-solid fa-file-pen"></i> Ask For Quote
             </a>
             <a href="#" class="text-gray-400 hover:text-[#f44032] text-[17px] relative text-md">

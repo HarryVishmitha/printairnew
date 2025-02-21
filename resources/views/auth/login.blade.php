@@ -1,9 +1,8 @@
+<x-head :title="'Login'"/>
 <x-guest-layout>
+<!-- @vite('resources/js/scripts.js') -->
     <!-- Session Status (if any) -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
-    <x-alert-message msgtype="success" msgtitle="Success!">
-        Congratulations, you are the best player.
-    </x-alert-message>
+
     <!-- Custom Login Form -->
     <div class="flex flex-wrap w-full">
         <div class="flex flex-col w-full md:w-1/2">
@@ -43,7 +42,7 @@
                     <div class="flex items-center justify-between mb-4">
                         <button type="submit"
                                 class="w-full bg-black text-white py-2 rounded-md shadow-md hover:bg-white hover:text-black focus:outline-none focus:ring-2">
-                            Submit
+                            Log-in
                         </button>
                     </div>
 
@@ -62,8 +61,7 @@
 
         <!-- Image Section -->
         <div class="w-1/2 shadow-2xl">
-            <img class="hidden object-cover w-full h-screen md:block" src="/images/object/9.jpg" />
+            <img class="hidden object-cover w-full h-screen md:block" id="randomImage" />
         </div>
     </div>
 </x-guest-layout>
-

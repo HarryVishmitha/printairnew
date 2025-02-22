@@ -19,7 +19,7 @@
                 <span class="absolute w-5 h-5 text-center align-middle p-1 text-xs bg-red-500 rounded-full -right-3 -top-3.5 text-white leading">5</span>
                 <i class="fa-solid fa-cart-shopping"></i> Cart
             </a>
-            <a href="{{ route('dashboard') }}" class="text-gray-400 hover:text-[#f44032] text-[17px]">
+            <a href="{{ route('user.dashboard') }}" class="text-gray-400 hover:text-[#f44032] text-[17px]">
                 <i class="fas fa-user"></i> Login
             </a>
         </div>

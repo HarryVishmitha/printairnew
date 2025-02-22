@@ -47,5 +47,41 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     </head>
-    <body class="bg-netral-100">
-    
+    <body class=" dark:bg-red-50 bg-neutral-500 h-screen">
+    <div class="">
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="relative">
+            <div class="w-16 h-screen bg-blue-600 text-white absolute top-0 left-0 transition-all hover:w-64 hover:relative">
+                <div class="flex flex-col items-center p-4">
+                    <div class="text-center mt-4">
+                        <h3 class="text-xl font-semibold">Sidebar</h3>
+                    </div>
+                    <ul class="mt-6 space-y-4">
+                        <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Dashboard</a></li>
+                        <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Settings</a></li>
+                        <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Profile</a></li>
+                        <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Messages</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ml-16 p-4 w-full">
+            <!-- Top Navbar -->
+            <div class="text-black p-4 shadow-md rounded-lg bg-white">
+                <div class="flex items-center justify-between">
+                    <div class="text-[25px] font-be-vietnam-pro font-extrabold">Printair</div>
+                    <div>
+                        <button class="px-4 py-2 bg-gray-200 rounded border-black border hover:bg-black hover:text-white">Logout</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="text-2xl font-semibold">Welcome to the App</div>
+            <p class="mt-4 text-gray-700">This is the main content area. The sidebar expands when hovered.</p>
+        </div>
+    </div>
+
+        
+

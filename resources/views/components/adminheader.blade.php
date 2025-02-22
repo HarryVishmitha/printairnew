@@ -51,37 +51,125 @@
     <div class="">
 
     <div class="flex">
-        <!-- Sidebar -->
-        <div class="relative">
-            <div class="w-16 h-screen bg-blue-600 text-white absolute top-0 left-0 transition-all hover:w-64 hover:relative">
-                <div class="flex flex-col items-center p-4">
-                    <div class="text-center mt-4">
-                        <h3 class="text-xl font-semibold">Sidebar</h3>
-                    </div>
-                    <ul class="mt-6 space-y-4">
-                        <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Dashboard</a></li>
-                        <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Settings</a></li>
-                        <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Profile</a></li>
-                        <li><a href="#" class="block py-2 px-4 hover:bg-blue-700 rounded">Messages</a></li>
-                    </ul>
-                </div>
+        <div class="group flex-none shadow-sm w-16 hover:w-64 duration-300 bg-gray-800 min-h-screen text-white flex flex-col justify-between hidden lg:flex">
+            <div class="flex flex-col items-center group-hover:items-start p-4">
+                <!-- Dashboard Link -->
+                <a href="#" class="flex items-center w-full mb-4">
+                    <i class="fa-solid fa-house-user text-xl group-hover:text-2xl"></i>
+                    <span class="ml-4 group-hover:inline hidden">Dashboard</span>
+                </a>
+                <!-- Tasks Link -->
+                <a href="#" class="flex items-center w-full mb-4">
+                    <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Tasks">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h18M3 18h18"></path>
+                    </svg>
+                    <span class="ml-4 group-hover:inline hidden">Tasks</span>
+                </a>
+                <!-- Settings Link -->
+                <a href="#" class="flex items-center w-full mb-4">
+                    <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Settings">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m16-10V7a4 4 0 00-4-4H8a4 4 0 00-4 4v4m16 0h-4a3 3 0 00-6 0H4"></path>
+                    </svg>
+                    <span class="ml-4 group-hover:inline hidden">Settings</span>
+                </a>
+                <!-- Logout Link -->
+                <a href="#" class="flex items-center w-full mb-4">
+                    <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Logout">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7"></path>
+                    </svg>
+                    <span class="ml-4 group-hover:inline hidden">Logout</span>
+                </a>
+            </div>
+            <div class="flex flex-col items-center group-hover:items-start p-4 sticky top-0">
+                <!-- Profile Link -->
+                <a href="#" class="flex items-center w-full mb-4">
+                    <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Profile">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l2-2m0 0l7-7-7-7m-2 2v6a2 2 0 002 2h4a2 2 0 002-2v-6m-6 6h6"></path>
+                    </svg>
+                    <span class="ml-4 group-hover:inline hidden">Profile</span>
+                </a>
+                <!-- Settings Link -->
+                <a href="#" class="flex items-center w-full mb-4 sticky">
+                    <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Settings">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m16-10V7a4 4 0 00-4-4H8a4 4 0 00-4 4v4m16 0h-4a3 3 0 00-6 0H4"></path>
+                    </svg>
+                    <span class="ml-4 group-hover:inline hidden">Settings</span>
+                </a>
             </div>
         </div>
-        <div class="ml-16 p-4 w-full">
+        <div class="flex-1 pt-3 px-3 lg:px-10 pb-10">
+            <!-- Main content goes here -->
             <!-- Top Navbar -->
-            <div class="text-black p-4 shadow-md rounded-lg bg-white">
-                <div class="flex items-center justify-between">
-                    <div class="text-[25px] font-be-vietnam-pro font-extrabold">Printair</div>
-                    <div>
-                        <button class="px-4 py-2 bg-gray-200 rounded border-black border hover:bg-black hover:text-white">Logout</button>
-                    </div>
+            <div class="text-black p-4 shadow-md rounded-lg bg-white mb-8 flex justify-between items-center">
+                <div class="lg:hidden">
+                    <button id="menuBtn" class="text-black focus:outline-none">
+                    <svg class="w-6 h-6 transform scale-x-[-1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                    </button>
+                </div>
+                <div class="text-[25px] font-be-vietnam-pro font-extrabold text-[#f44032] sm:flex sm:align-items md:text-center">Printair</div>
+                <div class="hidden lg:block">
+                    <button class="px-4 py-2 bg-gray-200 rounded border-black border hover:bg-black hover:text-white">Logout</button>
                 </div>
             </div>
-            <!-- Main Content -->
-            <div class="text-2xl font-semibold">Welcome to the App</div>
-            <p class="mt-4 text-gray-700">This is the main content area. The sidebar expands when hovered.</p>
         </div>
     </div>
 
-        
+    <!-- Off-canvas sidebar -->
+    <div id="offcanvasSidebar" class="offcanvas fixed inset-y-0 left-0 w-64 bg-gray-800  z-50 lg:hidden">
+        <div class="flex flex-col items-center group-hover:items-start p-4 text-white">
+            <!-- Close Button -->
+            <button id="closeBtn" class="self-end mb-4 text-xl">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <!-- Dashboard Link -->
+            <a href="#" class="flex items-center w-full mb-4 text-white">
+                <i class="fa-solid fa-house-user text-xl group-hover:text-2xl"></i>
+                <span class="ml-4">Dashboard</span>
+            </a>
+            <!-- Tasks Link -->
+            <a href="#" class="flex items-center w-full mb-4">
+                <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Tasks">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h18M3 18h18"></path>
+                </svg>
+                <span class="ml-4">Tasks</span>
+            </a>
+            <!-- Settings Link -->
+            <a href="#" class="flex items-center w-full mb-4">
+                <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Settings">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m16-10V7a4 4 0 00-4-4H8a4 4 0 00-4 4v4m16 0h-4a3 3 0 00-6 0H4"></path>
+                </svg>
+                <span class="ml-4">Settings</span>
+            </a>
+            <!-- Profile Link -->
+            <a href="#" class="flex items-center w-full mb-4">
+                <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Profile">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l2-2m0 0l7-7-7-7m-2 2v6a2 2 0 002 2h4a2 2 0 002-2v-6m-6 6h6"></path>
+                </svg>
+                <span class="ml-4">Profile</span>
+            </a>
+            <!-- Logout Link -->
+            <a href="#" class="flex items-center w-full mb-4">
+                <svg class="w-6 h-6 group-hover:w-8 group-hover:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Logout">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7"></path>
+                </svg>
+                <span class="ml-4">Logout</span>
+            </a>
 
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const offcanvasSidebar = document.getElementById('offcanvasSidebar');
+
+        menuBtn.addEventListener('click', () => {
+            offcanvasSidebar.classList.add('offcanvas-show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            offcanvasSidebar.classList.remove('offcanvas-show');
+        });
+    </script>
